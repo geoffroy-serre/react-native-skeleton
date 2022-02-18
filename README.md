@@ -14,7 +14,7 @@ Script example:
 ```js
 "lint": "eslint . --ext .js,.jsx --ignore-pattern node_modules/"
 ```
-
+### Eslint config
 Create a file named .eslintrc.json and fill it with this :
 ```js
 {
