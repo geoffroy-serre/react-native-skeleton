@@ -15,6 +15,38 @@ Script example:
 "lint": "eslint . --ext .js,.jsx --ignore-pattern node_modules/"
 ```
 
+Create a file named .eslintrc.json and fill it with this :
+```js
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"react-native/react-native": true
+	},
+	"extends": ["eslint:recommended", "plugin:react/recommended"],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": ["react", "react-native"],
+	"rules": {
+		"react-native/no-unused-styles": 2,
+		"react-native/no-inline-styles": 2,
+		"react-native/no-raw-text": 2
+		// "react-native/sort-styles": 2
+		// "react-native/no-color-literals": 2,
+		// "react-native/split-platform-components": 2,
+		// "react-native/no-single-element-style-arrays": 2
+	},
+	"settings": {
+		"react": {"version": "detect"}
+	}
+}
+```
+
 
 ## Prettier
 Prettier isn't setted here, as I use VSCode extension for prettier and it is configured in it.
